@@ -2,8 +2,8 @@
 #
 # add - add column of numbers
 #
-# @(#) $Revision: 1.2 $
-# @(#) $Id: Makefile,v 1.2 1999/09/20 18:16:03 chongo Exp chongo $
+# @(#) $Revision: 1.3 $
+# @(#) $Id: Makefile,v 1.3 1999/09/22 02:27:57 chongo Exp chongo $
 # @(#) $Source: /usr/local/src/cmd/add/RCS/Makefile,v $
 #
 # Copyright (c) 1999 by Landon Curt Noll.  All Rights Reserved.
@@ -22,6 +22,10 @@
 # INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO
 # EVENT SHALL LANDON CURT NOLL BE LIABLE FOR ANY SPECIAL, INDIRECT OR
 # CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF
+#
+# chongo <was here> /\oo/\
+#
+# Share and enjoy!
 
 SHELL=/bin/sh
 BINMODE=0555

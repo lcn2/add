@@ -2,14 +2,14 @@
 #
 # add - add column of numbers
 #
-# @(#) $Revision$
-# @(#) $Id$
-# @(#) $Source$
-#
-# Copyright (c) 1999 by Landon Curt Noll.  All Rights Reserved.
-#
 # usage:
 #	add [col]
+#
+# @(#) $Revision: 1.2 $
+# @(#) $Id: add.sh,v 1.2 1999/09/20 18:16:03 chongo Exp chongo $
+# @(#) $Source: /usr/local/src/cmd/add/RCS/add.sh,v $
+#
+# Copyright (c) 1999 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
@@ -25,6 +25,10 @@
 # INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO
 # EVENT SHALL LANDON CURT NOLL BE LIABLE FOR ANY SPECIAL, INDIRECT OR
 # CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF
+#
+# chongo <was here> /\oo/\
+#
+# Share and enjoy!
 
 if [ "$#" -eq 1 ]; then
 	col="$1";
