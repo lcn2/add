@@ -2,9 +2,9 @@
 #
 # add - add column of numbers
 #
-# @(#) $Revision$
-# @(#) $Id$
-# @(#) $Source$
+# @(#) $Revision: 1.2 $
+# @(#) $Id: Makefile,v 1.2 1999/09/20 18:16:03 chongo Exp chongo $
+# @(#) $Source: /usr/local/src/cmd/add/RCS/Makefile,v $
 #
 # Copyright (c) 1999 by Landon Curt Noll.  All Rights Reserved.
 #
@@ -27,7 +27,7 @@ SHELL=/bin/sh
 BINMODE=0555
 DESTBIN=/usr/local/bin
 DESTLIB=/usr/local/lib
-INSTALL=bsdinst
+INSTALL=install
 
 all: add
 
