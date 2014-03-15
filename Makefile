@@ -2,8 +2,8 @@
 #
 # add - add column of numbers
 #
-# @(#) $Revision: 1.4 $
-# @(#) $Id: Makefile,v 1.4 1999/09/26 21:16:52 chongo Exp root $
+# @(#) $Revision: 1.5 $
+# @(#) $Id: Makefile,v 1.5 2014/03/15 23:39:53 root Exp root $
 # @(#) $Source: /usr/local/src/bin/add/RCS/Makefile,v $
 #
 # Copyright (c) 1999-2014 by Landon Curt Noll.  All Rights Reserved.
@@ -63,12 +63,13 @@ help:
 	@echo make clobber
 	@echo
 	@echo make pushsrc
-	@echo make pushsrcq
 	@echo make pushsrcn
 	@echo
 	@echo make rmtall
 	@echo make rmtinstall
 	@echo make rmtclobber
+	@echo
+	@echo make univ
 
 # push source to remote sites
 #
@@ -94,3 +95,7 @@ rmtclean:
 
 rmtclobber:
 	${RMAKE} -v ${THISDIR} clobber
+
+# build, install, and cleanup everywhere
+#
+univ: all install clobber pushsrc rmtall rmtinstall rmtclobber
