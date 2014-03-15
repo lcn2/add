@@ -2,11 +2,11 @@
 #
 # add - add column of numbers
 #
-# @(#) $Revision: 1.3 $
-# @(#) $Id: Makefile,v 1.3 1999/09/22 02:27:57 chongo Exp chongo $
-# @(#) $Source: /usr/local/src/cmd/add/RCS/Makefile,v $
+# @(#) $Revision: 1.4 $
+# @(#) $Id: Makefile,v 1.4 1999/09/26 21:16:52 chongo Exp root $
+# @(#) $Source: /usr/local/src/bin/add/RCS/Makefile,v $
 #
-# Copyright (c) 1999 by Landon Curt Noll.  All Rights Reserved.
+# Copyright (c) 1999-2014 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
@@ -30,10 +30,17 @@
 SHELL=/bin/sh
 BINMODE=0555
 DESTBIN=/usr/local/bin
-DESTLIB=/usr/local/lib
 INSTALL=install
 
-all: add
+TARGETS= add
+
+# remote operations
+#
+THISDIR= add
+RSRCPSH= rsrcpush
+RMAKE= rmake
+
+all: ${TARGETS}
 
 add: add.sh
 	-rm -f $@
@@ -41,9 +48,49 @@ add: add.sh
 	chmod +x $@
 
 install: all
-	${INSTALL} -c -m ${BINMODE} add ${DESTBIN}/add
+	${INSTALL} -c -m ${BINMODE} ${TARGETS} ${DESTBIN}
 
 clean:
 
 clobber: clean
 	-rm -f add
+
+# help
+#
+help:
+	@echo make all
+	@echo make install
+	@echo make clobber
+	@echo
+	@echo make pushsrc
+	@echo make pushsrcq
+	@echo make pushsrcn
+	@echo
+	@echo make rmtall
+	@echo make rmtinstall
+	@echo make rmtclobber
+
+# push source to remote sites
+#
+pushsrc:
+	${RSRCPSH} -v -x . ${THISDIR}
+
+pushsrcq:
+	@${RSRCPSH} -q . ${THISDIR}
+
+pushsrcn:
+	${RSRCPSH} -v -x -n . ${THISDIR}
+
+# run make on remote hosts
+#
+rmtall:
+	${RMAKE} -v ${THISDIR} all
+
+rmtinstall:
+	${RMAKE} -v ${THISDIR} install
+
+rmtclean:
+	${RMAKE} -v ${THISDIR} clean
+
+rmtclobber:
+	${RMAKE} -v ${THISDIR} clobber
