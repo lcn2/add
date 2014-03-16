@@ -2,11 +2,11 @@
 #
 # add - add column of numbers
 #
-# @(#) $Revision: 1.5 $
-# @(#) $Id: Makefile,v 1.5 2014/03/15 23:39:53 root Exp root $
-# @(#) $Source: /usr/local/src/bin/add/RCS/Makefile,v $
+# @(#) $Revision: 1.6 $
+# @(#) $Id: Makefile,v 1.6 2014/03/15 23:59:57 root Exp root $
+# @(#) $Source: /usr/local/src/bin/ave/../add/RCS/Makefile,v $
 #
-# Copyright (c) 1999-2014 by Landon Curt Noll.  All Rights Reserved.
+# Copyright (c) 1999,2014 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
