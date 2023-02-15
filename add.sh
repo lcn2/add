@@ -5,9 +5,9 @@
 # usage:
 #	add [col]
 #
-# @(#) $Revision: 1.2 $
-# @(#) $Id: add.sh,v 1.2 1999/09/20 18:16:03 chongo Exp chongo $
-# @(#) $Source: /usr/local/src/cmd/add/RCS/add.sh,v $
+# @(#) $Revision: 1.3 $
+# @(#) $Id: add.sh,v 1.3 1999/09/26 21:16:52 chongo Exp $
+# @(#) $Source: /usr/local/src/bin/add/RCS/add.sh,v $
 #
 # Copyright (c) 1999 by Landon Curt Noll.  All Rights Reserved.
 #

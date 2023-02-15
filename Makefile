@@ -2,8 +2,8 @@
 #
 # add - add column of numbers
 #
-# @(#) $Revision: 1.7 $
-# @(#) $Id: Makefile,v 1.7 2014/03/16 02:30:32 root Exp $
+# @(#) $Revision: 1.9 $
+# @(#) $Id: Makefile,v 1.9 2015/09/06 02:24:19 root Exp $
 # @(#) $Source: /usr/local/src/bin/add/RCS/Makefile,v $
 #
 # Copyright (c) 1999,2014 by Landon Curt Noll.  All Rights Reserved.
