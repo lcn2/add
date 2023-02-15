@@ -2,11 +2,7 @@
 #
 # add - add column of numbers
 #
-# @(#) $Revision: 1.9 $
-# @(#) $Id: Makefile,v 1.9 2015/09/06 02:24:19 root Exp $
-# @(#) $Source: /usr/local/src/bin/add/RCS/Makefile,v $
-#
-# Copyright (c) 1999,2014 by Landon Curt Noll.  All Rights Reserved.
+# Copyright (c) 1999,2014,2023 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
@@ -27,18 +23,12 @@
 #
 # Share and enjoy!
 
-SHELL=/bin/sh
-BINMODE=0555
-DESTBIN=/usr/local/bin
-INSTALL=install
+SHELL= bash
+BINMODE= 0555
+DESTBIN= /usr/local/bin
+INSTALL= install
 
 TARGETS= add
-
-# remote operations
-#
-THISDIR= add
-RSRCPSH= rsrcpush
-RMAKE= rmake
 
 all: ${TARGETS}
 
@@ -61,41 +51,3 @@ help:
 	@echo make all
 	@echo make install
 	@echo make clobber
-	@echo
-	@echo make pushsrc
-	@echo make pushsrcn
-	@echo
-	@echo make rmtall
-	@echo make rmtinstall
-	@echo make rmtclobber
-	@echo
-	@echo make univ
-
-# push source to remote sites
-#
-pushsrc:
-	${RSRCPSH} -v -x . ${THISDIR}
-
-pushsrcq:
-	@${RSRCPSH} -q . ${THISDIR}
-
-pushsrcn:
-	${RSRCPSH} -v -x -n . ${THISDIR}
-
-# run make on remote hosts
-#
-rmtall:
-	${RMAKE} -v ${THISDIR} all
-
-rmtinstall:
-	${RMAKE} -v ${THISDIR} install
-
-rmtclean:
-	${RMAKE} -v ${THISDIR} clean
-
-rmtclobber:
-	${RMAKE} -v ${THISDIR} clobber
-
-# build, install, and cleanup everywhere
-#
-univ: all install clobber pushsrc rmtall rmtinstall rmtclobber
