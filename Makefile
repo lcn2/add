@@ -27,15 +27,18 @@ SHELL= bash
 BINMODE= 0555
 DESTBIN= /usr/local/bin
 INSTALL= install
+RM= rm
+CP= cp
+CHMOD= chmod
 
 TARGETS= add
 
 all: ${TARGETS}
 
 add: add.sh
-	-rm -f $@
-	cp $@.sh $@
-	chmod +x $@
+	${RM} -f $@
+	${CP} $@.sh $@
+	${CHMOD} +x $@
 
 install: all
 	${INSTALL} -c -m ${BINMODE} ${TARGETS} ${DESTBIN}
@@ -43,7 +46,7 @@ install: all
 clean:
 
 clobber: clean
-	-rm -f add
+	${RM} -f add
 
 # help
 #
