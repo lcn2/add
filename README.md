@@ -13,14 +13,14 @@ sudo make install
 # Example
 
 ```sh
-/usr/local/bin/add 2 < data
+$ /usr/local/bin/add 2 < data
 23209
 ```
 
 
 # To use
 
-```sh
+```
 /usr/local/bin//add [-h] [-V] [field]
 
     -h          print help message and exit
