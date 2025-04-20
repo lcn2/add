@@ -21,7 +21,7 @@ $ /usr/local/bin/add 2 < data
 # To use
 
 ```
-/usr/local/bin//add [-h] [-V] [field]
+/usr/local/bin/add [-h] [-V] [field]
 
     -h          print help message and exit
     -V          print version string and exit
